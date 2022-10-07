@@ -3,7 +3,7 @@ package com.example.joole.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Product")
+@Table(name = "product")
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +16,7 @@ public class Product {
     private String certification;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "description_id")
+    @JoinColumn(name = "description_id",referencedColumnName = "id")
     private Description description;
 
     @OneToOne(cascade = CascadeType.ALL)

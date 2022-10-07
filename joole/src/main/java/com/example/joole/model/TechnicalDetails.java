@@ -1,9 +1,11 @@
 package com.example.joole.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Technicaldetails")
+@Table(name = "technicalDetails")
 public class TechnicalDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,9 +19,10 @@ public class TechnicalDetails {
     @Column(name = "fanSpeed")
     private int fanSpeed;
 
-    @OneToOne(mappedBy="product",
+    @OneToOne(mappedBy="technicalDetails",
             cascade={CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST,
                     CascadeType.REFRESH})
+    @JsonIgnore
     private Product product;
 
     public TechnicalDetails() {
