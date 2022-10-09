@@ -87,4 +87,16 @@ public class Product {
     public void setProductType(ProductType productType) {
         this.productType = productType;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", productBrand='" + productBrand + '\'' +
+                ", certification='" + certification + '\'' +
+                ", description=" + description +
+                ", technicalDetails=" + technicalDetails +
+                ", productType=" + productType +
+                '}';
+    }
 }

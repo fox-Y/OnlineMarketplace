@@ -78,4 +78,15 @@ public class Description {
     public void setProduct(Product product) {
         this.product = product;
     }
+
+    @Override
+    public String toString() {
+        return "Description{" +
+                "id=" + id +
+                ", manufacturer='" + manufacturer + '\'' +
+                ", series='" + series + '\'' +
+                ", model='" + model + '\'' +
+                ", product=" + product +
+                '}';
+    }
 }

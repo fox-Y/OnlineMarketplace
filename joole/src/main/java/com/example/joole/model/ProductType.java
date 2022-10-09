@@ -102,4 +102,17 @@ public class ProductType {
     public void setProduct(Product product) {
         this.product = product;
     }
+
+    @Override
+    public String toString() {
+        return "ProductType{" +
+                "id=" + id +
+                ", application='" + application + '\'' +
+                ", type='" + type + '\'' +
+                ", mountain_location='" + mountain_location + '\'' +
+                ", accessories='" + accessories + '\'' +
+                ", model_year='" + model_year + '\'' +
+                ", product=" + product +
+                '}';
+    }
 }
